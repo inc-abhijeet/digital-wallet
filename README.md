@@ -49,7 +49,7 @@ Then a simple check of this degree with the degree required by a given feature s
 No algorithm can be directly applied to such a huge dataset for >3 degree friends as it is really time consuming and slow. But there are approximations that can be implemented. Like if two users have interacted a great number of times (T, this T should be derived through experimentations.) then that edge is of higher importance to use than those edges where the users have hardly interacted with each other. Such are the edges that can be ignored when constructing the Minimum Spanning Tree. This is the pre-processing which will construst the approximated tree. BFS is now run on this tree while keeping a track of the number of hops from a given node to the rest of the nodes in the tree. Finally the above formula is applied for any two given pairs of users to determine if they are trusted or unverified depeding on their degree.
 However, there may be components in the approximated tree. So the above algorithm will now be applied for each component in this tree. 
 
-To better enhance this algorithm we can compute a threshold for the degree "N". This can be computed through heuristics. Any degree above N will have the above algorithm applied to it and any degree below this threshold will be run through Floyd Warshal algorithm.
+To better enhance this algorithm we can compute a threshold for the degree "N". This can be computed through heuristics. Any degree above N will have the above algorithm applied to it and any degree below this threshold will be run through Floyd Warshall algorithm.
 
 ##Work flow
 1. createGraph.py
