@@ -70,4 +70,8 @@ To better enhance this algorithm we can compute a threshold for the degree "N". 
 
 
 
+##Output of run_tests.sh
+	[PASS]: test-1-paymo-trans (output1.txt)
+	[PASS]: test-1-paymo-trans (output2.txt)
+	[PASS]: test-1-paymo-trans (output3.txt)
 
