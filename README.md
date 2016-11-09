@@ -43,6 +43,30 @@ However, there may be components in the approximated tree. So the above algorith
 To better enhance this algorithm we can compute a threshold for the degree "N". This can be computed through heuristics. Any degree above N will have the above algorithm applied to it and any degree below this threshold will be run through Floyd Warshal algorithm.
 
 
+##Repo directory structure
+
+	├── README.md 
+	├── run.sh
+	├── src
+	│  	└── antifraud.java
+	├── paymo_input
+	│   └── batch_payment.txt
+	|   └── stream_payment.txt
+	├── paymo_output
+	│   └── output1.txt
+	|   └── output2.txt
+	|   └── output3.txt
+	└── insight_testsuite
+	 	   ├── run_tests.sh
+		   └── tests
+	        	└── test-1-paymo-trans
+        		│   ├── paymo_input
+        		│   │   └── batch_payment.txt
+        		│   │   └── stream_payment.txt
+        		│   └── paymo_output
+        		│       └── output1.txt
+        		│       └── output2.txt
+        		│       └── output3.txt
 
 
 
