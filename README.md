@@ -1,6 +1,7 @@
 # digital-wallet
 
 ##Features implemented
+
 Digital wallet warns the user for the following three features:
 
 ###Feature 1
@@ -29,8 +30,10 @@ For now the three features have been implmented pretty straight forward. However
 However an algorithm that I did come up with is a modification of Breath First Search and Minimum Spanning tree and Least Common Ancestor.
 
 One direct way would be to select a root in the graph and then apply BFS while maintaining a hop count for each of the nodes from this root. For any two given nodes (id1 and id2), we know the distance of these nodes from the root and we can compute the LCA of these two nodes (ancestor). Using the formula we can compute the degree of two nodes, 
+
 distance(root, id1) + distance(root, id2) - 2 * distance(root, ancestor)
-.............................................^ LCA............
+
+..................................................................^ LCA............
 
 Then a simple check of this degree with the degree required by a given feature should mark the two users as trusted or unverified. However, for the LCA to be calculated the graph will have to be a tree. But, through experimentations I figured out that the given dataset does not produce a tree and hence it is not possible to use the above algorithm directly. 
 
