@@ -3,7 +3,7 @@
 # Table of Contents
 
 1. [Features implemented] (README.md#features-implemented)
-2. [Implementation details] (README.md#implementation-details)
+2. [Implementation details] (README.md#implmentation-details)
 3. [Algorithm] (README.md#algorithm)
 4. [Work flow] (README.md#work-flow)
 5. [Repo directory structure](README.md#repo-directory-structure)
