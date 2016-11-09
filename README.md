@@ -1,5 +1,14 @@
 # digital-wallet
 
+# Table of Contents
+
+1. [Features implemented] (README.md#features-implemented)
+2. [Implementation details] (README.md#implementation-details)
+3. [Algorithm] (README.md#algorithm)
+4. [Work flow] (README.md#work-flow)
+5. [Repo directory structure](README.md#repo-directory-structure)
+6. [Output of run tests] (README.md#output-of-run-tests)
+
 ##Features implemented
 
 Digital wallet warns the user for the following three features:
@@ -24,7 +33,7 @@ The initial stage is to create a graph from batch_payment.txt. If users have int
 ###Preparing the input data
 Since all the three features are primariliy concerned with the two id's (column 1 and 2, indexed 0) in the stream_payment.txt this file is accessed only once by createInputData and it outputs the two id's to a comma separated inputData.txt. This is then accessed by all the three features for testing purposes. It saves time as the stream_payment need not be opened and traversed always, since we are only interested in the column 1 and 2 of this file.
 
-###Algorithm
+##Algorithm
 For now the three features have been implmented pretty straight forward. However, feature 3 is pretty time consuming. A better algorithm that could be used was Flyod Warshall. However, the time complexity for this algorithm is O(N^3) where N is the number of the nodes. Which is what the present implmentation of feature 3 potrays as well. Recursion is also not a pleasing option for feature 3.
 
 However an algorithm that I did come up with is a modification of Breath First Search and Minimum Spanning tree and Least Common Ancestor.
@@ -42,7 +51,7 @@ However, there may be components in the approximated tree. So the above algorith
 
 To better enhance this algorithm we can compute a threshold for the degree "N". This can be computed through heuristics. Any degree above N will have the above algorithm applied to it and any degree below this threshold will be run through Floyd Warshal algorithm.
 
-###Work flow
+##Work flow
 1. createGraph.py
  1. Reads batch_payment.txt row by row
  2. Creates an adjacency list, edge added if two id's have had a transaction.
@@ -102,7 +111,7 @@ To better enhance this algorithm we can compute a threshold for the degree "N". 
 
 
 
-##Output of run_tests.sh
+##Output of run tests
 	[PASS]: test-1-paymo-trans (output1.txt)
 	[PASS]: test-1-paymo-trans (output2.txt)
 	[PASS]: test-1-paymo-trans (output3.txt)
