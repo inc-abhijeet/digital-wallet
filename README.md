@@ -48,7 +48,13 @@ To better enhance this algorithm we can compute a threshold for the degree "N". 
 	├── README.md 
 	├── run.sh
 	├── src
-	│  	└── antifraud.java
+	│  	└── createGraph.py
+	│  	└── createInputData.py
+	│  	└── feature1.py
+	│  	└── feature2.py
+	│  	└── feature3.py
+	│  	└── graph.pk
+	│  	└── inputData.txt
 	├── paymo_input
 	│   └── batch_payment.txt
 	|   └── stream_payment.txt
